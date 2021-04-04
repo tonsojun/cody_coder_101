@@ -26,4 +26,9 @@
 
 <br>
 
-<%= link_to 'New Author', new_author_path %>
+  <div>
+    <%= collection_select(@authors, @authors.name, Author.all, :id, :name) %>
+  </div>
+
+<%= link_to 'New Author', new_author_path %><br>
+<%= link_to 'Books', '/'%>
